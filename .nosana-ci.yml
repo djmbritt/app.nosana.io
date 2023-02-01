@@ -1,0 +1,16 @@
+nosana:
+  description: Nosana-Node Pipeline
+
+global:
+  image: registry.hub.docker.com/library/node:lts
+
+  trigger:
+    branch:
+      - all
+
+jobs:
+  - name: Build and upload to IPFS
+    commands:
+      - npm ci
+      - npm run generate
+      - npm run ipfs
