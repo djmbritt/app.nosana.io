@@ -7,6 +7,13 @@ global:
   trigger:
     branch:
       - all
+      
+  environment:
+    NODE_ENV: ipfs
+    PINATA_JWT_KEY:
+        type: nosana/secret
+        endpoint: https://secrets.k8s.prd.nos.ci
+        value: PINATA_JWT_KEY
 
 jobs:
   - name: Build and upload to IPFS
