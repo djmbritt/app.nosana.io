@@ -19,4 +19,4 @@ jobs:
     commands:
       - npm ci
       - npm run generate
-      - npm run ipfs $PINATA_JWT_KEY
+      - npm run ipfs
