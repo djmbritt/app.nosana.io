@@ -19,5 +19,5 @@ jobs:
   - name: Build and upload to IPFS
     commands:
       - npm ci
-      - npm run generate
+      - npm run generate:ipfs
       - npm run ipfs
