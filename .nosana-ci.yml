@@ -9,6 +9,7 @@ global:
       - all
       
   environment:
+    NODE_ENV: ipfs
     PINATA_JWT_KEY:
         type: nosana/secret
         endpoint: https://secrets.k8s.prd.nos.ci
