@@ -7,10 +7,16 @@ global:
   trigger:
     branch:
       - all
+      
+  environment:
+    PINATA_JWT_KEY:
+        type: nosana/secret
+        endpoint: https://secrets.nosana.ci
+        value: PINATA_JWT_KEY
 
 jobs:
   - name: Build and upload to IPFS
     commands:
       - npm ci
       - npm run generate
-      - npm run ipfs
+      - npm run ipfs $PINATA_JWT_KEY
