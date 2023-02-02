@@ -10,9 +10,9 @@ export default {
   // server: {
   //   port: 80 // default: 3000
   // },
-  // router: {
-  //   base: '/frontend/'
-  // },
+  router: {
+    base: process.env.NODE_ENV === 'development' ? '/' : '/ipfs/hash/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Nosana Network',
@@ -81,7 +81,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+    '@agency-undone/nuxt-module-ipfs'
   ],
   auth: {
     strategies: {
