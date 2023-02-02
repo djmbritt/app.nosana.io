@@ -52,9 +52,10 @@ const pinDirectoryToPinata = async () => {
     // });
     console.log(print)
     console.log(JSON.parse(response.body));
-    console.log(`☀☀☀ Navigate to https://gateway.pinata.cloud/ipfs/${JSON.parse(response.body).IpfsHash} to view your site!`);
+    console.log('☀☀☀ Navigate to to the link below to view your site!');
+    console.log(`https://nosana.mypinata.cloud/ipfs/${JSON.parse(response.body).IpfsHash}`);
   } catch (error) {
-    console.log("🔥🔥🔥🔥🔥", error);
+    console.log('🔥🔥🔥🔥🔥', error);
   }
 };
 
