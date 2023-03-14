@@ -16,4 +16,3 @@ jobs:
     commands:
       - npm ci
       - npm run generate:ipfs
-      - npm run ipfs
