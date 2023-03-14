@@ -2,7 +2,7 @@ nosana:
   description: Nosana-Node Pipeline
 
 global:
-  image: registry.hub.docker.com/library/node:lts
+  image: node:18
 
   trigger:
     branch:
@@ -11,9 +11,6 @@ global:
   environment:
     NODE_ENV: ipfs
     PINATA_JWT_KEY:
-        type: nosana/secret
-        endpoint: https://secrets.k8s.prd.nos.ci
-        value: PINATA_JWT_KEY
 
 jobs:
   - name: Build and upload to IPFS
