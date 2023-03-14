@@ -10,7 +10,6 @@ global:
       
   environment:
     NODE_ENV: ipfs
-    PINATA_JWT_KEY:
 
 jobs:
   - name: Build and upload to IPFS
